@@ -46,17 +46,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EjemploMDI.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EjemploMDI.Designer.cs">
-      <DependentUpon>EjemploMDI.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="manCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="manCategorias.Designer.cs">
+      <DependentUpon>manCategorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="manClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="manClientes.Designer.cs">
+      <DependentUpon>manClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="manProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="manProductos.Designer.cs">
+      <DependentUpon>manProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="manProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="manProveedores.Designer.cs">
+      <DependentUpon>manProveedores.cs</DependentUpon>
     </Compile>
     <Compile Include="manUsuario.cs">
       <SubType>Form</SubType>
@@ -72,11 +90,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="EjemploMDI.resx">
-      <DependentUpon>EjemploMDI.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manCategorias.resx">
+      <DependentUpon>manCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manClientes.resx">
+      <DependentUpon>manClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manProductos.resx">
+      <DependentUpon>manProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manProveedores.resx">
+      <DependentUpon>manProveedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="manUsuario.resx">
       <DependentUpon>manUsuario.cs</DependentUpon>
