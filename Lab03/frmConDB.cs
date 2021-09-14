@@ -21,7 +21,10 @@ namespace Lab03
 
         private void frmConDB_Load(object sender, EventArgs e)
         {
-
+            btnPersona.Enabled = false;
+            btnCurso.Enabled = false;
+            btnDesconectar.Enabled = false;
+            btnEstado.Enabled = false;
         }
 
         private void btnConectar_Click(object sender, EventArgs e)
@@ -46,6 +49,9 @@ namespace Lab03
                 conn.Open();
                 MessageBox.Show("Conectado Satisfactoriamente");
                 btnDesconectar.Enabled = true;
+                btnCurso.Enabled = true;
+                btnPersona.Enabled = true;
+                btnEstado.Enabled = true;
             } catch (Exception ex)
             {
                 MessageBox.Show("Error al conectar al servidor: \n"+ex.ToString());
@@ -78,6 +84,9 @@ namespace Lab03
                 if (conn.State != ConnectionState.Closed) {
                     conn.Close();
                     MessageBox.Show("Conexion cerrada satisfactoriamente");
+                    btnDesconectar.Enabled = false;
+                    btnCurso.Enabled = false;
+                    btnPersona.Enabled = false;
                 } else {
                     MessageBox.Show("La conexion ya esta cerrada");
                 }
@@ -102,6 +111,12 @@ namespace Lab03
         {
             Persona persona = new Persona(conn);
             persona.Show(); 
+        }
+
+        private void btnCurso_Click(object sender, EventArgs e)
+        {
+            Curso curso = new Curso(conn);
+            curso.Show();
         }
     }
 }
