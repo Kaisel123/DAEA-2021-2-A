@@ -1,19 +1,19 @@
 ﻿@model List<Lab13.Models.Persona>
 @{
-    ViewBag.Title = "Listar";
-
-    var grid = new WebGrid(source: Model, columnNames: new[] { 
+    ViewBag.Title = "Buscar";
+    var grid = new WebGrid(source: Model, columnNames: new[] {
         "PersonaID", "Nombre", "Apellido", "FechaNac", "Direccion", "Email"
     });
 }
+
 <h2>Listado de Personas</h2>
 
 <p>
-    @using (Html.BeginForm("Listar", "Persona", FormMethod.Get))
+    @using (Html.BeginForm("Buscar", "Persona", FormMethod.Get))
     {
         <b>Escoga el metodo de busqueda: </b>
-        @Html.RadioButton("btnsOpcion", "Nombre") <text>Nombre</text>
-        @Html.RadioButton("btnsOpcion", "Apellido") <text>Apellido</text>
+        @Html.RadioButton("chkOpcion", "Nombre") <text>Nombre</text>
+        @Html.RadioButton("chkOpcion", "Apellido") <text>Apellido</text>
         <br />
         @Html.TextBox("txtBusqueda") <input type="submit" value="Buscar" />
     }
@@ -33,29 +33,4 @@
 
                 )
     )
-<!--
-<table class="table table-striped">
-    <tr>
-        <th>PersonaID</th>
-        <th>Nombre</th>
-        <th>Apellido</th>
-        <th>Fecha Nac.</th>
-        <th>Direccion</th>
-        <th>Email</th>
-        <th>Acciones</th>
-    </tr>
-    @foreach (var persona in Model)
-    {
-        <tr>
-            <td>@persona.PersonaID</td>
-            <td>@persona.Nombre</td>
-            <td>@persona.Apellido</td>
-            <td>@persona.FechaNac</td>
-            <td>@persona.Direccion</td>
-            <td>@persona.Email</td>
-            <td>@Html.ActionLink("Ver", "Mostrar", "Persona",
-               new { id = persona.PersonaID}, null)</td>
-        </tr>
-    }
-</table>
--->
+
